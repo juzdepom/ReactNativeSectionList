@@ -13,7 +13,10 @@ class SectionListItem extends Component {
                 <Text style={styles.itemText}>
                     {this.props.item.description}
                 </Text>
+                <View style={styles.dividingLine}>
+                </View>
             </View>
+
         )
     }
 }
@@ -69,6 +72,12 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: 'rgb(77,120,140)',
     },
+    headerText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'white',
+        margin: 20,
+    },
     itemContainer: {
         flex: 1,
         flexDirection: 'column',
@@ -81,10 +90,12 @@ const styles = StyleSheet.create({
         marginLeft: 20,
         marginRight: 10
     },
-    headerText: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: 'white',
-        margin: 20,
+    dividingLine: {
+        backgroundColor: 'rgb(77,120,140)',
+        height: 1,
+        margin: 4,
+        marginLeft: 20,
+        marginRight: 10
     }
+
 });
