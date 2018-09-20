@@ -1,6 +1,5 @@
-var sectionListData = [
+export const sectionListData = [
     {
-        title: "Server Side",
         data: [
             {
                 name: 'Django',
@@ -14,10 +13,11 @@ var sectionListData = [
                 name: 'Ruby on Rails',
                 description: 'Rails (usually referred to as "Ruby on Rails") is a web framework written for the Ruby programming language.'
             },
-        ]
+        ],
+        title: "Server Side",
+
     },
     {
-        title: 'Client Side',
         data: [
             {
                 name: 'AngularJS',
@@ -31,10 +31,11 @@ var sectionListData = [
                 name: 'React',
                 description: 'for user interface design'
             }
-        ]
+        ],
+        title: 'Client Side',
+
     },
     {
-        title: "Artificial Intelligence",
         data: [
             {
                 name: 'TensorFlow',
@@ -44,6 +45,8 @@ var sectionListData = [
                 name: 'Wise.io',
                 description: "Wise.io also aims to democratise the use of artificial intelligence with 'machine learning as a service"
             }
-        ]
+        ],
+        title: "Artificial Intelligence",
+
     }
 ]
