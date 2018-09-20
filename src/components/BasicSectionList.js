@@ -18,6 +18,18 @@ class SectionListItem extends Component {
     }
 }
 
+class SectionHeader extends Component {
+    render() {
+        return (
+            <View style={styles.headerContainer}>
+                <Text style={styles.headerText}>
+                    {this.props.section.title}
+                </Text>
+            </View>
+        )
+    }
+}
+
 export default class BasicSectionList extends Component {
 
     render(){
@@ -29,6 +41,12 @@ export default class BasicSectionList extends Component {
                             <SectionListItem item={item} key={index} index={index} >
 
                             </SectionListItem>
+                        );
+                    }}
+                    renderSectionHeader={({ section }) => {
+                        return(
+                            <SectionHeader section={section} />
+
                         );
                     }}
                     sections={sectionListData}
@@ -47,6 +65,10 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: Platform.OS === 'ios' ? 34: 0
     },
+    headerContainer: {
+        flex: 1,
+        backgroundColor: 'rgb(77,120,140)',
+    },
     itemContainer: {
         flex: 1,
         flexDirection: 'column',
@@ -58,5 +80,11 @@ const styles = StyleSheet.create({
         color: 'rgb(173, 252, 250)',
         marginLeft: 20,
         marginRight: 10
+    },
+    headerText: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: 'white',
+        margin: 20,
     }
 });
